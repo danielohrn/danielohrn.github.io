@@ -1,19 +1,12 @@
 const letters = document.getElementsByTagName("span");
-
-const states = "animation";
-
+const state = "animation";
  
-
-function togglePulse() {
-	setInterval(function(){
+window.onload =	setInterval(function(){
 		for(let i = 0; i < letters.length; i++) {
-			if(letters[i].className != states) {
-				letters[i].className = states;
+			if(letters[i].className != state) {
+				letters[i].className = state;
 			} else {
 				letters[i].className = "normal"; 
 			}
 		}
 	}, 500);
-}
-
-togglePulse();
