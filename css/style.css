@@ -1,13 +1,32 @@
 body {
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(#0b2938, #333333);
+	background: linear-gradient(to right, #7ca761, #63a7b7);
+	font-family: 'Righteous';
 }
 
 h1 {
 	font-size: 100px;
-	margin: 200px auto;
 	text-align: center;
-	font-family: sans-serif;
-	color: lightgray;
+	color: #b4dde2;
+	text-transform: uppercase;
+	letter-spacing: 25px;
+}
+
+h1 span {
+	display: inline-block;
+	font-style: normal;
+}
+
+h1 .normal {
+	transition: all .6s;
+}
+
+h1 .animation {
+	transform: scale(1.5);
+	transition: all .6s;
+	cursor: pointer;
+	text-shadow: 20px 20px;	
+}
+
+h1 span:nth-child(odd) {
+	color: #e91e63;
 }
