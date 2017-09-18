@@ -1,0 +1,13 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#0b2938, #333333);
+}
+
+h1 {
+	font-size: 100px;
+	margin: 200px auto;
+	text-align: center;
+	font-family: sans-serif;
+	color: lightgray;
+}
