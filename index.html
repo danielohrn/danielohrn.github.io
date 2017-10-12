@@ -1,16 +1,114 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Github pages</title>
-	<link href="css/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeWriter</title>
+   <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+
+       body {
+           margin: 0; 
+           background: #efebe9;
+           font-family: 'American Typewriter', sans-serif;
+       }
+
+       .input-container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           height: 200px;
+           margin: 0 auto; 
+           display: flex; 
+       }
+
+       .input-container input {
+           display: none; 
+       }
+
+       #input {
+           height: 30px;
+           width: 200px;
+           padding: 0 0 0 10px; 
+       }
+
+       #button {
+           width: 200px; 
+           margin: 5px 0 0 0;
+       }
+      
+       #para {
+            background: wheat;
+            margin-top: 0; 
+       }
+
+       #numberOfLetters {
+           display: inline-block;
+           font-size: 25px;
+           color: #379588; 
+           background: wheat; 
+           margin: 10px 0; 
+       }
+
+       #letters {
+           color: #F44336; 
+           font-size: 35px; 
+           background: #379588; 
+           padding: 0 10px;  
+       }
+
+       #spaces {
+           color: #FF9800; 
+           font-size: 35px; 
+           background: #379588;
+           padding: 0 10px;  
+       }
+
+       #letters:hover, #spaces:hover {
+           background: wheat;
+           cursor: pointer; 
+       }
+
+       .result {
+           margin: 10px auto;
+           width: 80%; 
+           text-align: center;
+           color: #000; 
+           overflow: hidden;
+       }
+
+       .loadBar {
+           height: 2px;
+           width: 0px; 
+           background: linear-gradient(to left, green, rgb(145, 24, 24)); 
+           transition: width 2s ease; 
+       }
+
+       .result-message {
+            display: none;
+            background: wheat; 
+            margin: 10px 0 0 0; 
+       }
+   
+   </style>
 </head>
 <body>
 
-	<h1><span>G</span><span>i</span><span>t</span><span>h</span><span>u</span><span>b</span></h1>
+    <div class="input-container">
+        <p class="result-message">Your <span></span>has:</p>
+        <p id="numberOfLetters"><span id="letters">x</span> letters and <span id="spaces">x</span> spaces.</p>            
+        <input type="text" id="input">
+        <input type="button" value="Count!" id="button">
 
-	<h1><span>P</span><span>A</span><span>G</span><span>E</span><span>S</span></h1>
+    </div>
 
-	<script src="js/script.js"></script>
+    <div class="result">
+        <div class="loadBar"></div>            
+        <p id="para"></p>   
+        
+    </div>
+
+
+    <script src="main.js"></script>
 </body>
 </html>
